@@ -1,1 +1,1 @@
-s is th github projet for the datascientest training
+This is github projet for the datascientest training
