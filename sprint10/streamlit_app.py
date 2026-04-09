@@ -7,8 +7,9 @@ from tensorflow.keras import Sequential, preprocessing
 from tensorflow.keras.layers import Embedding, Dense, GlobalAveragePooling1D
 from tensorflow.keras.models import load_model
 
+MODEL_PATH="sprint10/word2vec.keras"
 #model.load_weights("word2vec.weights.h5")
-model = load_model("word2vec.keras")
+model = load_model(MODEL_PATH)
 
 # extraire la matrice d'embeddings
 vectors = model.layers[0].trainable_weights[0].numpy()
