@@ -8,6 +8,7 @@ from tensorflow.keras.layers import Embedding, Dense, GlobalAveragePooling1D
 from tensorflow.keras.models import load_model
 
 MODEL_PATH="sprint10/word2vec.keras"
+CSV_PATH="sprint10/MovieReview.csv"
 #model.load_weights("word2vec.weights.h5")
 model = load_model(MODEL_PATH)
 
@@ -51,7 +52,7 @@ def print_closest(word2idx, idx2word, word, number=10):
         print(idx2word[index_word[1]]," -- ",index_word[0])
 
 st.title("Modèle Word2Vec with streamlit")
-df = pd.read_csv("MovieReview.csv")
+df = pd.read_csv(CSV_PATH)
 
 import re
 import unicodedata
